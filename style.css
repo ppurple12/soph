@@ -204,55 +204,29 @@ body {
 /* Media Queries for Mobile Devices */
 
 /* iPhone and smaller devices */
-@media (max-width: 768px) {
+/* Make sure everything adapts on smaller screens */
+@media (max-width: 600px) {
   #curved-title {
-    font-size: 50px; /* Smaller title font on smaller screens */
+    font-size: 14px;  /* Smaller title size */
   }
 
   .heart {
-    width: 60px;
-    height: 60px;
-    animation: pulse 1s infinite ease-in-out;
+    width: 25px;  /* Smaller heart */
+    height: 25px; /* Smaller heart */
   }
 
   #face {
-    width: 180px;
-    height: 180px;  /* Reduce face size for small screens */
+    width: 60px; /* Smaller face */
+    height: 60px; /* Smaller face */
   }
 
   #fancy-textbox {
-    width: 90%;
-    height: 250px;
-    font-size: 16px; /* Adjust font size inside textbox */
+    width: 80%;
+    font-size: 12px; /* Smaller text */
   }
 
-  .title {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 480px) {
-  #curved-title {
-    font-size: 40px;
-  }
-
-  .heart {
-    width: 50px;
-    height: 50px;
-  }
-
-  #face {
-    width: 150px;
-    height: 150px;
-  }
-
-  #fancy-textbox {
-    width: 90%;
-    height: 200px;
-    font-size: 14px;  /* Further reduce font size */
-  }
-
-  .title {
-    font-size: 30px;
+  .small-heart {
+    width: 8px;
+    height: 8px;
   }
 }

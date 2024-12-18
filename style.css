@@ -1,0 +1,203 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+/* Curved Title Style */
+#curved-title {
+  font-family: 'Dancing Script', cursive;
+    font-size: 92px;
+    text-align: center;
+    background: linear-gradient(45deg, #1a641a, #523ec4, #8a1799);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom:100px;
+   
+    animation: curveTitle 2s ease-in-out infinite alternate;
+    transition: color 0.3s ease;
+  }
+  
+
+  
+ 
+/* Base Heart Style */
+.heart {
+  position: fixed; /* Stay fixed in corners */
+  width: 75px;
+  height: 75px;
+  background-color: #ff6b81;
+  transform: rotate(-45deg); /* Heart starts rotated 90 degrees to the right */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Circle parts of the heart */
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: #ff6b81;
+  border-radius: 50%; /* Make the top circles of the heart */
+}
+
+.heart:before {
+  top: 0; /* Circle to the right */
+  left: 33px;
+}
+
+.heart:after {
+  top: -33px; /* Circle above */
+  left: 0;
+}
+
+/* Heart positions in corners */
+.top-left {
+  top: 100px;
+  left: 100px;
+}
+
+.top-right {
+  top: 100px;
+  right: 100px;
+}
+
+.bottom-left {
+  bottom: 100px;
+  left: 100px;
+}
+
+.bottom-right {
+  bottom: 100px;
+  right: 100px;
+}
+
+#face {
+    position: absolute;
+    width: 250px;  /* Adjust the size as needed */
+    height: 250px; /* Make sure this matches the part of the image you want to show */
+    object-fit: cover;  /* Ensures the image fills the circle */
+    border-radius: 50%; /* Makes the image circular */
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+
+/* Fancy Textbox Style */
+#fancy-textbox {
+    margin-top: 20px;  /* Space out from the image */
+    padding: 10px;
+    width: 500px;
+    height: 350px;
+    border: 2px solid hotpink;  /* Hot pink border */
+    background-color: rgba(255, 255, 255, 0.8);  /* Slight transparency */
+    font-family: 'Cursive', sans-serif;  /* Cursive-like font */
+    font-size: 18px;
+    color: #333;
+    border-radius: 25px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+  }
+  
+  /* Textbox Focus Effect */
+  #fancy-textbox:focus {
+    outline: none;
+    border-color: #ff00ff;  /* Brighter pink border when focused */
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);  /* Brighter shadow when focused */
+  }
+
+/* Pulsing animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) rotate(-65deg); /* Rotate 90 degrees right */
+  }
+  50% {
+    transform: scale(1.2) rotate(-25deg); /* Keep the same rotation while pulsing */
+  }
+}
+
+/* Style for sparkles */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: sparkleEffect 0.5s forwards;
+  }
+  
+  @keyframes sparkleEffect {
+    0% {
+      transform: scale(1) translate(-50%, -50%);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+/* Small Hearts Animation */
+.small-heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6b81;
+    transform: rotate(45deg);
+    animation: pourHearts 2s forwards;
+    opacity: 0;
+  }
+  
+  .small-heart:before,
+  .small-heart:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6b81;
+    border-radius: 50%;
+  }
+  
+  .small-heart:before {
+    left: 0;
+    top: -15px;
+  }
+  
+  .small-heart:after {
+    top: 0;
+    left: 15px;
+  }
+  
+  @keyframes pourHearts {
+    0% {
+      transform: rotate(-45deg) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-45deg) scale(0) translate(20px, 20px);
+      opacity: 0;
+    }
+  }
+
+/* Fancy Title Styling */
+    .title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 48px;
+      font-weight: bold;
+      color: #ff69b4; /* Hot pink color */
+      text-align: center;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .title:hover {
+      color: #ff1493; /* Darker pink on hover */
+    }

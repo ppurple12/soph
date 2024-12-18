@@ -201,3 +201,58 @@ body {
     .title:hover {
       color: #ff1493; /* Darker pink on hover */
     }
+/* Media Queries for Mobile Devices */
+
+/* iPhone and smaller devices */
+@media (max-width: 768px) {
+  #curved-title {
+    font-size: 50px; /* Smaller title font on smaller screens */
+  }
+
+  .heart {
+    width: 60px;
+    height: 60px;
+    animation: pulse 1s infinite ease-in-out;
+  }
+
+  #face {
+    width: 180px;
+    height: 180px;  /* Reduce face size for small screens */
+  }
+
+  #fancy-textbox {
+    width: 90%;
+    height: 250px;
+    font-size: 16px; /* Adjust font size inside textbox */
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  #curved-title {
+    font-size: 40px;
+  }
+
+  .heart {
+    width: 50px;
+    height: 50px;
+  }
+
+  #face {
+    width: 150px;
+    height: 150px;
+  }
+
+  #fancy-textbox {
+    width: 90%;
+    height: 200px;
+    font-size: 14px;  /* Further reduce font size */
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}

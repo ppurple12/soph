@@ -229,4 +229,35 @@ body {
     width: 8px;
     height: 8px;
   }
+  .heart:before {
+  top: 0; /* Circle to the right */
+  left: 11px;
+}
+
+.heart:after {
+  top: -11px; /* Circle above */
+  left: 0;
+}
+
+/* Heart positions in corners */
+.top-left {
+  top: 33px;
+  left: 33px;
+}
+
+.top-right {
+  top: 33px;
+  right: 33px;
+}
+
+.bottom-left {
+  bottom: 33px;
+  left: 33px;
+}
+
+.bottom-right {
+  bottom: 33px;
+  right: 33px;
+}
+
 }

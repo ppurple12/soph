@@ -207,7 +207,7 @@ body {
 /* Make sure everything adapts on smaller screens */
 @media (max-width: 600px) {
   #curved-title {
-    font-size: 14px;  /* Smaller title size */
+    font-size: 30px;  /* Smaller title size */
   }
 
   .heart {
@@ -258,6 +258,15 @@ body {
 .bottom-right {
   bottom: 33px;
   right: 33px;
+}
+  .heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff6b81;
+  border-radius: 50%; /* Make the top circles of the heart */
 }
 
 }
